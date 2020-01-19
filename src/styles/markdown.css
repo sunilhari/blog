@@ -1,4 +1,4 @@
-/* Additional vertical padding used by kbd tag. */
+/* purgecss start ignore */
 .py-05 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
@@ -82,3 +82,5 @@
 .markdown td {
   @apply border py-1 px-3;
 }
+
+/* purgecss end ignore */
