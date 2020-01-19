@@ -30,7 +30,10 @@ function BlogPostTemplate(props) {
             className="inline-block no-underline shadow-none hover:text-black hover:underline py-2"
             to={previous.fields.slug}
           >
-            <span role="img">👈🏻</span> {previous.frontmatter.title}
+            <span role="img" aria-label="Previous">
+              👈🏻
+            </span>{" "}
+            {previous.frontmatter.title}
           </Link>
         )}
         {next && (
@@ -39,7 +42,10 @@ function BlogPostTemplate(props) {
             to={next.fields.slug}
           >
             {next.frontmatter.title}
-            <span role="img"> 👉🏻</span>
+            <span role="img" aria-label="Next">
+              {" "}
+              👉🏻
+            </span>
           </Link>
         )}
       </div>

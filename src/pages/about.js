@@ -68,6 +68,7 @@ function About({ location: { pathname } }) {
                 className="link"
                 href={`https://twitter.com/${twitter}`}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="h-6 fill-current text-gray-600 hover:text-teal-700"
@@ -83,6 +84,7 @@ function About({ location: { pathname } }) {
                 className="link"
                 href={`https://github.com/${github}`}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="h-6 fill-current text-gray-600 hover:text-teal-700"
@@ -98,6 +100,7 @@ function About({ location: { pathname } }) {
                 className="link"
                 href={`https://www.instagram.com/${instagram}/`}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="h-6 fill-current text-gray-600 hover:text-teal-700"
@@ -116,6 +119,7 @@ function About({ location: { pathname } }) {
           <img
             src={myImage}
             className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+            alt={author}
           />
         </div>
       </div>

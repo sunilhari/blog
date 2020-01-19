@@ -55,7 +55,7 @@ function Header({ pathname }) {
                 if (isExternal) {
                   return (
                     <li key={index}>
-                      <a href={path} target="_blank">
+                      <a href={path} target="_blank" rel="noopener noreferrer">
                         {label}
                       </a>
                     </li>

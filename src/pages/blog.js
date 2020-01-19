@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Post from "../components/Post"
 import PageContext from "../context/PageContext"
+
 const Blogs = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
