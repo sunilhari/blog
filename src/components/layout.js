@@ -1,7 +1,7 @@
 import React from "react"
-import Header from "./Header"
-import Footer from "./Footer"
-import SEO from "./Seo"
+import Header from "./header"
+import Footer from "./footer"
+import SEO from "./seo"
 
 const Layout = ({ children, pathname, seoTitle, pageHeading }) => (
   <div className="font-sans leading-normal tracking-wider">

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import Post from "../components/Post"
+import Layout from "../components/layout"
+import Post from "../components/post"
 import PageContext from "../context/PageContext"
 
 const Blogs = props => {
