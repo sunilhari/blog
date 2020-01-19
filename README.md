@@ -5,5 +5,5 @@
   </a>
 </p>
 <h1 align="center">
-  Personal Blog
+  Personal Blog.
 </h1>
