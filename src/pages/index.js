@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../components/layout"
-import Hero from "../components/hero"
+import Layout from "../components/Layout"
+import Hero from "../components/Hero"
 
 function Blog(props) {
   const { location } = props
