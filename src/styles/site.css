@@ -14,3 +14,6 @@ body,
 }
 
 /* purgecss end ignore */
+.mobile-view-profile-icon {
+  background-image: url("../../static/me.png");
+}

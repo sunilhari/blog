@@ -55,7 +55,12 @@ function Header({ pathname }) {
                 if (isExternal) {
                   return (
                     <li key={index}>
-                      <a href={path} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block no-underline shadow-none hover:text-black hover:underline py-2 px-4"
+                      >
                         {label}
                       </a>
                     </li>
