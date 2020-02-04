@@ -31,9 +31,7 @@ function About({ location: { pathname } }) {
     myLocation,
     social: { github, instagram, twitter },
   } = data.site.siteMetadata
-  const backgroundImage = {
-    "background-image": myImage,
-  }
+
   return (
     <Layout pathname={pathname} seoTitle="About Me" pageHeading="About Me">
       <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">

@@ -78,6 +78,7 @@ function Header({ pathname }) {
                     </li>
                   )
                 }
+                return null
               })}
             </ul>
           </nav>
