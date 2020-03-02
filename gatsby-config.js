@@ -121,7 +121,7 @@ module.exports = {
       options: {
         height: 3,
         prependToBody: true,
-        color: `#2C5282`,
+        color: `#003b9a`,
       },
     },
     `gatsby-plugin-offline`,

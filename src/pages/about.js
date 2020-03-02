@@ -68,7 +68,7 @@ function About({ location: { pathname } }) {
               {myLocation}
             </p>
             <p className="pt-8 text-sm">
-              A Javascript developer by profession,intersted in programming.
+              A Javascript developer by profession,interested in programming.
             </p>
             <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
               <a
