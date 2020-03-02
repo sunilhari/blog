@@ -14,15 +14,15 @@ function BlogPostTemplate(props) {
     >
       <div className="font-serif">
         <Link to={slug}>
-          <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">
+          <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl">
             {post.frontmatter.title}
           </h1>
         </Link>
         <p className="text-sm md:text-base font-normal text-gray-600">
-          Published {post.frontmatter.date}
+          Published on {post.frontmatter.date}
         </p>
         <div
-          className="py-6 markdown"
+          className="py-10 markdown"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         {previous && (
