@@ -7,7 +7,7 @@ module.exports = {
     description: `My Little Space in Web`,
     whatDoIdo: "I code for Living",
     myLocation: "Bangalore,INDIA",
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://sunilhari.in`,
     social: {
       twitter: `sunilhario`,
       github: `sunilhari`,
@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         label: "Blog",
-        path: "/blog",
+        path: "/blogs",
         isExternal: false,
       },
       {
@@ -52,8 +52,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
+        extensions: [`.mdx`, `.md`],
         plugins: [
           {
             resolve: `gatsby-remark-images`,
