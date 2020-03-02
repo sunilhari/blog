@@ -11,6 +11,7 @@ body,
 #gatsby-focus-wrapper {
   height: 100vh;
   @apply bg-gray-100 h-full;
+  @apply font-mono;
 }
 
 /* purgecss end ignore */
