@@ -5,21 +5,24 @@ import Layout from "../components/Layout"
 function BlogPostTemplate(props) {
   const post = props.data.markdownRemark
   const { previous, next, slug } = props.pageContext
+  const { title, date, categories = [] } = post.frontmatter
   return (
-    <Layout
-      pathname={slug}
-      title={post.frontmatter.title}
-      seoTitle={post.frontmatter.title}
-      pageHeading={""}
-    >
+    <Layout pathname={slug} title={title} seoTitle={title} pageHeading={""}>
       <div className="font-serif">
         <Link to={slug}>
-          <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl">
-            {post.frontmatter.title}
+          <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl text-center">
+            {title}
           </h1>
         </Link>
-        <p className="text-sm md:text-base font-normal text-gray-600">
-          Published on {post.frontmatter.date}
+        <p className="pb-2 text-center">
+          {categories.split(",").map(category => (
+            <label class="bg-blue-900 text-white text-sm font-bold mr-2  p-1">
+              #{category}
+            </label>
+          ))}
+        </p>
+        <p className="text-sm md:text-base font-normal text-gray-600 text-right">
+          Published on {date}
         </p>
         <div
           className="py-10 markdown"
@@ -70,6 +73,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        categories
       }
       timeToRead
     }
