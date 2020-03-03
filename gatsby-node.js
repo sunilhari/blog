@@ -28,12 +28,12 @@ exports.createPages = async ({ graphql, actions }) => {
   )
 
   if (result.errors) {
+    console.log("ERROR - ", result.errors)
     throw result.errors
   }
 
   // Create blog posts pages.
   const posts = result.data.allMdx.edges
-
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node

@@ -1,4 +1,4 @@
-const path = require(`path`)
+// const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: `sunilhari`,
@@ -73,15 +73,9 @@ module.exports = {
             options: {
               classPrefix: "language-",
               inlineCodeMarker: null,
-              // This lets you set up language aliases.  For example,
-              // setting this to '{ sh: "bash" }' will let you use
-              // the language "sh" which will highlight using the
-              // bash highlighter.
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
-              // Customize the prompt used in shell output
-              // Values below are default
               prompt: {
                 user: "root",
                 host: "localhost",
