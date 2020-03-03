@@ -7,7 +7,7 @@ import PageContext from "../context/PageContext"
 const Blogs = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMdx.edges
   const { isOpen, toggleMenu } = useContext(PageContext)
   useEffect(() => {
     isOpen && toggleMenu()
@@ -54,7 +54,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt

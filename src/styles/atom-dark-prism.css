@@ -13,7 +13,7 @@ pre::-webkit-scrollbar-thumb {
   border-radius: 0px;
 }
 
-code[class*="language-"],
+pre code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
   background: rgb(40, 41, 54);
@@ -61,7 +61,7 @@ code[class*="language-"] ::selection {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre {
   background: rgba(40, 41, 54, 1) !important;
   border-radius: 0.5em;
   padding: 1em;
