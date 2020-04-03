@@ -31,7 +31,7 @@ const Hero = () => {
           Hi, I'm {author}
         </h1>
         <p className="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">
-          a Javacript {`{ developer }`}
+          a Javascript {`{ developer }`}
         </p>
       </div>
       <div className="w-1/2  py-6 overflow-y-hidden">

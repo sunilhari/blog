@@ -44,7 +44,7 @@ function BlogHeader({ slug, title, categories, date }) {
   )
 }
 
-function template(props) {
+function Template(props) {
   const post = props.data.mdx
   const { previous, next, slug } = props.pageContext
   const { title, date, categories = [] } = post.frontmatter
@@ -71,7 +71,7 @@ function template(props) {
   )
 }
 
-export default template
+export default Template
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
