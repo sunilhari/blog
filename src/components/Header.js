@@ -1,6 +1,6 @@
-import React, { useContext } from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import PageContext from "../context/PageContext"
+import React, { useContext } from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import PageContext from "../context/PageContext";
 
 function Header({ pathname }) {
   const {
@@ -20,8 +20,8 @@ function Header({ pathname }) {
         }
       }
     }
-  `)
-  const { isOpen, toggleMenu } = useContext(PageContext)
+  `);
+  const { isOpen, toggleMenu } = useContext(PageContext);
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
       <div className="w-full  flex flex-wrap items-center justify-between mt-0 px-6 py-3">
@@ -51,7 +51,7 @@ function Header({ pathname }) {
           <nav>
             <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
               {menuConfig.map((menu, index) => {
-                const { label, path, isExternal } = menu
+                const { label, path, isExternal } = menu;
                 if (isExternal) {
                   return (
                     <li key={index}>
@@ -64,7 +64,7 @@ function Header({ pathname }) {
                         {label}
                       </a>
                     </li>
-                  )
+                  );
                 }
                 if (pathname !== path) {
                   return (
@@ -76,9 +76,9 @@ function Header({ pathname }) {
                         {label}
                       </Link>
                     </li>
-                  )
+                  );
                 }
-                return null
+                return null;
               })}
             </ul>
           </nav>
@@ -94,7 +94,7 @@ function Header({ pathname }) {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Header
+export default Header;

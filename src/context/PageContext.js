@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 const defaultState = {
   isOpen: false,
   toggleMenu: () => {},
-}
-const PageContext = React.createContext(defaultState)
+};
+const PageContext = React.createContext(defaultState);
 
 function PageContextProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
-    setIsOpen(false)
-  }, [])
+    setIsOpen(false);
+  }, []);
 
   return (
     <PageContext.Provider value={{ isOpen, toggleMenu }}>
       {children}
     </PageContext.Provider>
-  )
+  );
 }
-export default PageContext
-export { PageContextProvider }
+export default PageContext;
+export { PageContextProvider };

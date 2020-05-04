@@ -1,12 +1,12 @@
-import React, { useEffect, useContext } from "react"
-import { Link, graphql } from "gatsby"
-import { Layout, RenderMDX } from "../components"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import PageContext from "../context/PageContext"
+import React, { useEffect, useContext } from "react";
+import { Link, graphql } from "gatsby";
+import { Layout, RenderMDX } from "../components";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import PageContext from "../context/PageContext";
 
 function Navigate({ type, classNames }) {
   if (type) {
-    const { fields, frontmatter } = type
+    const { fields, frontmatter } = type;
     return (
       <Link
         className={` ${classNames} inline-block no-underline shadow-none hover:text-black hover:underline py-2`}
@@ -14,9 +14,9 @@ function Navigate({ type, classNames }) {
       >
         {frontmatter.title}
       </Link>
-    )
+    );
   }
-  return null
+  return null;
 }
 
 function BlogHeader({ slug, title, categories, date }) {
@@ -41,17 +41,17 @@ function BlogHeader({ slug, title, categories, date }) {
         Published on {date}
       </p>
     </>
-  )
+  );
 }
 
 function Template(props) {
-  const post = props.data.mdx
-  const { previous, next, slug } = props.pageContext
-  const { title, date, categories = [] } = post.frontmatter
-  const { isOpen, toggleMenu } = useContext(PageContext)
+  const post = props.data.mdx;
+  const { previous, next, slug } = props.pageContext;
+  const { title, date, categories = [] } = post.frontmatter;
+  const { isOpen, toggleMenu } = useContext(PageContext);
   useEffect(() => {
-    isOpen && toggleMenu()
-  }, [])
+    isOpen && toggleMenu();
+  }, []);
   return (
     <RenderMDX>
       <Layout pathname={slug} title={title} seoTitle={title} pageHeading={""}>
@@ -68,10 +68,10 @@ function Template(props) {
         </div>
       </Layout>
     </RenderMDX>
-  )
+  );
 }
 
-export default Template
+export default Template;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -93,4 +93,4 @@ export const pageQuery = graphql`
       timeToRead
     }
   }
-`
+`;
