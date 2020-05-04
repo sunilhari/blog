@@ -8,6 +8,7 @@ module.exports = {
     whatDoIdo: "I code for Living",
     myLocation: "Bangalore,INDIA",
     siteUrl: `https://sunilhari.in`,
+    repoName: "blog",
     social: {
       twitter: `sunilhario`,
       github: `sunilhari`,
