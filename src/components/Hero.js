@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import developerImage from "../../static/developer.svg"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import developerImage from "../../static/developer.svg";
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -21,9 +21,9 @@ const Hero = () => {
         }
       }
     }
-  `)
+  `);
 
-  const { author } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata;
   return (
     <div className="pt-10 md:pt-48 w-full  flex flex-col xs:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center content-center justify-center">
       <div className=" w-1/2 overflow-y-hidden">
@@ -42,7 +42,7 @@ const Hero = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

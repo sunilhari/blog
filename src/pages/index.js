@@ -1,14 +1,14 @@
-import React, { useContext, useEffect } from "react"
-import Layout from "../components/Layout"
-import Hero from "../components/Hero"
-import PageContext from "../context/PageContext"
+import React, { useContext, useEffect } from "react";
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import PageContext from "../context/PageContext";
 
 function Blog(props) {
-  const { location } = props
-  const { isOpen, toggleMenu } = useContext(PageContext)
+  const { location } = props;
+  const { isOpen, toggleMenu } = useContext(PageContext);
   useEffect(() => {
-    isOpen && toggleMenu()
-  }, [])
+    isOpen && toggleMenu();
+  }, []);
   return (
     <Layout
       pathname={location.pathname}
@@ -17,7 +17,7 @@ function Blog(props) {
     >
       <Hero />
     </Layout>
-  )
+  );
 }
 
-export default Blog
+export default Blog;

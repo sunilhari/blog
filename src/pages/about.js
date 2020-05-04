@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from "react"
-import Layout from "../components/Layout"
-import PageContext from "../context/PageContext"
-import myImage from "../../static/me.png"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useContext, useEffect } from "react";
+import Layout from "../components/Layout";
+import PageContext from "../context/PageContext";
+import myImage from "../../static/me.png";
+import { useStaticQuery, graphql } from "gatsby";
 
 function About({ location: { pathname } }) {
-  const { isOpen, toggleMenu } = useContext(PageContext)
+  const { isOpen, toggleMenu } = useContext(PageContext);
   const data = useStaticQuery(graphql`
     query AboutQuery {
       site {
@@ -21,16 +21,16 @@ function About({ location: { pathname } }) {
         }
       }
     }
-  `)
+  `);
   useEffect(() => {
-    isOpen && toggleMenu()
-  }, [])
+    isOpen && toggleMenu();
+  }, []);
   const {
     author,
     whatDoIdo,
     myLocation,
     social: { github, instagram, twitter },
-  } = data.site.siteMetadata
+  } = data.site.siteMetadata;
 
   return (
     <Layout pathname={pathname} seoTitle="About Me" pageHeading="About Me">
@@ -131,7 +131,7 @@ function About({ location: { pathname } }) {
         </div>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default About
+export default About;

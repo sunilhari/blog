@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
 
 function NotFoundPage(props) {
-  const { data } = props
-  const siteTitle = data.site.siteMetadata.title
+  const { data } = props;
+  const siteTitle = data.site.siteMetadata.title;
   return (
     <Layout
       pathname={props.location.pathname}
@@ -20,10 +20,10 @@ function NotFoundPage(props) {
         </span>
       </p>
     </Layout>
-  )
+  );
 }
 
-export default NotFoundPage
+export default NotFoundPage;
 
 export const pageQuery = graphql`
   query {
@@ -33,4 +33,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

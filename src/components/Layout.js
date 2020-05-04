@@ -1,7 +1,7 @@
-import React from "react"
-import Header from "./Header"
-import Footer from "./Footer"
-import Seo from "./Seo"
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import Seo from "./Seo";
 
 const Layout = ({ children, pathname, seoTitle, pageHeading }) => (
   <div className="leading-normal tracking-wider">
@@ -13,6 +13,6 @@ const Layout = ({ children, pathname, seoTitle, pageHeading }) => (
     </div>
     <Footer />
   </div>
-)
+);
 
-export default Layout
+export default Layout;
