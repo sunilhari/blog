@@ -49,9 +49,15 @@ function Template(props) {
   const { previous, next, slug } = props.pageContext;
   const { title, date, categories = [] } = post.frontmatter;
   const { isOpen, toggleMenu } = useContext(PageContext);
+  const {
+    repoName,
+    social: { github },
+  } = props.data.site.siteMetadata;
   useEffect(() => {
     isOpen && toggleMenu();
   }, []);
+  console.log(slug);
+  const gitEditURL = `https://github.com/${github}/${repoName}/edit/master/content${slug}index.mdx`;
   return (
     <RenderMDX>
       <Layout pathname={slug} title={title} seoTitle={title} pageHeading={""}>
@@ -66,6 +72,12 @@ function Template(props) {
           <Navigate type={previous} classNames="float-left" />
           <Navigate type={next} classNames="float-right" />
         </div>
+        <a href={gitEditURL} target="_blank" rel="noopener noreferrer">
+          <span role="img" aria-label="Edit this Page on Github">
+            ✍🏻
+          </span>
+          Edit this page on GitHub
+        </a>
       </Layout>
     </RenderMDX>
   );
@@ -78,6 +90,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        repoName
+        social {
+          github
+        }
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {
