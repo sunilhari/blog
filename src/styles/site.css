@@ -10,7 +10,7 @@ body,
 #___gatsby,
 #gatsby-focus-wrapper {
   height: 100vh;
-  @apply bg-gray-100 h-full;
+  @apply bg-white h-full;
   @apply font-mono;
 }
 

@@ -49,7 +49,7 @@ function Header({ pathname }) {
           id="menu"
         >
           <nav>
-            <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+            <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0 md:text-lg lg:text-lg xl:text-lg">
               {menuConfig.map((menu, index) => {
                 const { label, path, isExternal } = menu;
                 if (isExternal) {
