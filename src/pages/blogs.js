@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Post from "../components/Post";
+import Post from "../components/PostLink";
 import PageContext from "../context/PageContext";
 
 const Blogs = props => {
@@ -20,27 +20,29 @@ const Blogs = props => {
       pageHeading="All Posts"
     >
       <div className="flex flex-wrap justify-between pt-12 -mx-6">
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          const categories = node.frontmatter.categories
-            ? node.frontmatter.categories.split(",")
-            : [];
-          const slug = node.fields.slug;
-          const timeToRead = node.timeToRead;
-          const date = node.frontmatter.date;
-          const description = node.frontmatter.description || node.excerpt;
-          return (
-            <Post
-              key={node.fields.slug}
-              date={date}
-              title={title}
-              slug={slug}
-              description={description}
-              timeToRead={timeToRead}
-              categories={categories}
-            />
-          );
-        })}
+        <ol>
+          {posts.map(({ node }, index) => {
+            const title = node.frontmatter.title || node.fields.slug;
+            const categories = node.frontmatter.categories
+              ? node.frontmatter.categories.split(",")
+              : [];
+            const slug = node.fields.slug;
+            const timeToRead = node.timeToRead;
+            const date = node.frontmatter.date;
+            const description = node.frontmatter.description || node.excerpt;
+            return (
+              <Post
+                key={node.fields.slug}
+                date={date}
+                title={title}
+                slug={slug}
+                description={description}
+                timeToRead={timeToRead}
+                categories={categories}
+              />
+            );
+          })}
+        </ol>
       </div>
     </Layout>
   );

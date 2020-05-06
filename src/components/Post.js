@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-const Post = ({ title, slug, date, description, timeToRead, categories }) => (
+const Post = ({ title, slug, date, description, timeToRead }) => (
   <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
     <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg p-3">
       <Link

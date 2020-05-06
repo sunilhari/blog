@@ -49,7 +49,7 @@ function About({ location: { pathname } }) {
             <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-teal-500 opacity-25"></div>
             <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
               <svg
-                className="h-4 fill-current text-teal-700 pr-4"
+                className="h-4 fill-current text-gray-700 pr-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -59,7 +59,7 @@ function About({ location: { pathname } }) {
             </p>
             <p className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
               <svg
-                className="h-4 fill-current text-teal-700 pr-4"
+                className="h-4 fill-current text-gray-700 pr-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -78,7 +78,7 @@ function About({ location: { pathname } }) {
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="h-6 fill-current text-gray-600 hover:text-teal-700"
+                  className="h-6 fill-current text-gray-600 hover:text-gray-700"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ function About({ location: { pathname } }) {
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="h-6 fill-current text-gray-600 hover:text-teal-700"
+                  className="h-6 fill-current text-gray-600 hover:text-gray-700"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ function About({ location: { pathname } }) {
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="h-6 fill-current text-gray-600 hover:text-teal-700"
+                  className="h-6 fill-current text-gray-600 hover:text-gray-700"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"

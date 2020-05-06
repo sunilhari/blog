@@ -7,6 +7,7 @@
 .markdown {
   @apply text-gray-900 leading-normal break-words;
   @apply text-xl;
+  max-width: 800px;
 }
 
 .markdown > * + * {
@@ -26,7 +27,7 @@
 }
 
 .markdown a {
-  @apply text-blue-600 font-semibold;
+  @apply text-gray-600 font-semibold;
 }
 
 .markdown strong a {
