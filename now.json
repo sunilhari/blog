@@ -5,6 +5,11 @@
   "env": {
     "analyticsid": "@analyticsid"
   },
+  "build": {
+    "env": {
+      "analyticsid": "@analyticsid"
+    }
+  },
   "routes": [
     {
       "src": "/static/(.*)",
