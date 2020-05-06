@@ -9,7 +9,7 @@ function Navigate({ type, classNames }) {
     const { fields, frontmatter } = type;
     return (
       <Link
-        className={` ${classNames} inline-block no-underline shadow-none hover:text-black hover:underline py-2`}
+        className={` ${classNames} inline-block no-underline shadow-none hover:text- hover:underline py-2`}
         to={fields.slug}
       >
         {frontmatter.title}
@@ -19,7 +19,7 @@ function Navigate({ type, classNames }) {
   return null;
 }
 
-function BlogHeader({ slug, title, categories, date }) {
+function BlogHeader({ slug, title, categories, date, timeToRead }) {
   return (
     <>
       <Link to={slug}>
@@ -37,8 +37,9 @@ function BlogHeader({ slug, title, categories, date }) {
           </label>
         ))}
       </p>
-      <p className="text-sm md:text-base font-normal text-gray-600 text-right">
-        Published on {date}
+      <p className="text-sm md:text-base font-normal text-gray-600 justify-between flex text-xl">
+        <span className="text-xl">{date}</span>
+        <span className="text-xl">{timeToRead} min read</span>
       </p>
     </>
   );
@@ -67,6 +68,7 @@ function Template(props) {
             title={title}
             categories={categories}
             date={date}
+            timeToRead={post.timeToRead}
           />
           <MDXRenderer>{post.body}</MDXRenderer>
           <Navigate type={previous} classNames="float-left" />

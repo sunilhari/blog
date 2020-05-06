@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <div className="pt-10 md:pt-48 w-full  flex flex-col xs:flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row items-center content-center justify-center">
       <div className=" w-1/2 overflow-y-hidden">
-        <h1 className="my-4 text-3xl md:text-5xl text-blue-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
+        <h1 className="my-4 text-3xl md:text-5xl text-gray-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
           Hi, I'm {author}
         </h1>
         <p className="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">

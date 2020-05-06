@@ -23,15 +23,15 @@ function Header({ pathname }) {
   `);
   const { isOpen, toggleMenu } = useContext(PageContext);
   return (
-    <nav id="header" className="w-full z-30 top-0 py-1">
-      <div className="w-full  flex flex-wrap items-center justify-between mt-0 px-6 py-3">
+    <nav id="header" className="z-30 top-0 py-1">
+      <div className="flex flex-wrap items-center justify-between mt-0 px-6 py-3">
         <label
           htmlFor="menu-toggle"
           className="cursor-pointer md:hidden block"
           onClick={toggleMenu}
         >
           <svg
-            className="fill-current text-gray-900"
+            className="fill-current text-primary"
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -43,13 +43,13 @@ function Header({ pathname }) {
         </label>
 
         <div
-          className={`md:flex md:items-center md:w-auto w-full order-3 md:order-1 ${
+          className={`md:block w-full order-3 md:order-1 ${
             !isOpen ? "hidden" : null
           }`}
           id="menu"
         >
-          <nav>
-            <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+          <nav className="md:flex justify-center ">
+            <ul className="md:flex items-center text-base text-gray-700 pt-4 md:pt-0 md:text-lg lg:text-lg xl:text-lg">
               {menuConfig.map((menu, index) => {
                 const { label, path, isExternal } = menu;
                 if (isExternal) {
@@ -82,15 +82,6 @@ function Header({ pathname }) {
               })}
             </ul>
           </nav>
-        </div>
-
-        <div className="order-1 md:order-2">
-          <Link
-            className="flex items-center tracking-wide shadow-none no-underline hover:no-underline font-bold text-gray-800 text-xl "
-            to="/"
-          >
-            {author}
-          </Link>
         </div>
       </div>
     </nav>
