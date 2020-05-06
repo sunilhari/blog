@@ -2,6 +2,14 @@
   "version": 2,
   "routes": [],
   "alias": "sunilhari.in",
+  "env": {
+    "analyticsid": "@analyticsid"
+  },
+  "build": {
+    "env": {
+      "analyticsid": "@analyticsid"
+    }
+  },
   "routes": [
     {
       "src": "/static/(.*)",
