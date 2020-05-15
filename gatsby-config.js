@@ -166,7 +166,7 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   title: edge.node.frontmatter.title,
                   category:edge.node.frontmatter.categories,
-                  categories:edge.node.frontmatter.categories,
+                  tags:edge.node.frontmatter.categories,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
