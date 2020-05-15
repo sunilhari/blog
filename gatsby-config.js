@@ -165,6 +165,7 @@ module.exports = {
               return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   title: edge.node.frontmatter.title,
+                  category:edge.node.frontmatter.categories,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
