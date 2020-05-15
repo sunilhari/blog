@@ -165,13 +165,18 @@ module.exports = {
               return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   title: edge.node.frontmatter.title,
-                  category:edge.node.frontmatter.categories,
-                  tags:edge.node.frontmatter.categories,
+                  category: edge.node.frontmatter.categories,
+                  tags: edge.node.frontmatter.categories,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [
+                    {
+                      "content:encoded": edge.node.html,
+                      tags: edge.node.frontmatter.categories,
+                    },
+                  ],
                 });
               });
             },
