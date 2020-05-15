@@ -121,6 +121,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://sunilhari.in`,
+        stripQueryString: true,
+      },
+    },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-page-progress`,
@@ -157,13 +164,15 @@ module.exports = {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.frontmatter.title,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.rawBody }],
-                })
-              })
+                  content: edge.node.rawBody,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                });
+              });
             },
             query: `
               {
@@ -173,8 +182,7 @@ module.exports = {
                   edges {
                     node {
                       excerpt
-                      body
-                      rawBody
+                      html
                       fields { slug }
                       frontmatter {
                         title
