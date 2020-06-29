@@ -11,8 +11,7 @@ module.exports = {
     repoName: "blog",
     social: {
       twitter: `sunilhario`,
-      github: `sunilhari`,
-      instagram: `sunilhario`,
+      github: `sunilhari`
     },
     menuConfig: [
       {
