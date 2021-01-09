@@ -57,8 +57,7 @@ function Template(props) {
   useEffect(() => {
     isOpen && toggleMenu();
   }, []);
-  console.log(slug);
-  const gitEditURL = `https://github.com/${github}/${repoName}/edit/master/content${slug}index.mdx`;
+  const gitEditURL = `https://github.com/${github}/${repoName}/edit/master/content${slug}index.md`;
   return (
     <RenderMDX>
       <Layout pathname={slug} title={title} seoTitle={title} pageHeading={""}>
